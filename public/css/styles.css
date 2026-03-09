@@ -1,18 +1,72 @@
-.row {
-    display: flex;
-    /* justify-content: space-around; */
-    flex-wrap: wrap;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    margin:0;
+    padding:0;
 }
-.box{
-    margin: 5px;
-    padding: 5px;
-    border:1px solid gray;
-    border-radius: 5px;
-    
-}
+
+/* Header */
 .header{
-    background-color: bisque;
+    background-color: beige;
+    padding:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
 }
+
+/* Product container */
+.row{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:20px;
+}
+
+/* Product card */
+.box{
+    width:260px;
+    padding:15px;
+    border-radius:10px;
+    background:white;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:transform 0.3s;
+}
+
+.box:hover{
+    transform:scale(1.05);
+}
+
+/* Product image */
+.box img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+/* Product title */
+.box h2{
+    margin:10px 0;
+}
+
+/* Price */
+.box h4{
+    color:green;
+    margin:5px 0;
+}
+
+/* Description */
+.box p{
+    color:#555;
+    font-size:14px;
+}
+
+/* Footer */
 .footer{
     background-color: blanchedalmond;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
 }
