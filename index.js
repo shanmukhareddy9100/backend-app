@@ -7,7 +7,7 @@ import dbConnect from "./config/db.js";
 
 import dotenv from "dotenv";
 
-// import { productRouter } from "./routes/productRoute";
+import { productRouter } from "./routes/productRoute.js";
 import {storeRouter} from "./routes/storeRoute.js"
 
 const app = express()
@@ -16,6 +16,7 @@ dotenv.config();
 
 app.set("view engine","ejs");
 app.set("views","views");
+app.set("layout","layout");
 
 app.use(expressLayouts)
 app.use(express.urlencoded({extended:true}));
@@ -28,7 +29,7 @@ app.use(session({
 }))
 
 app.use("/",storeRouter);               //Beginning "/" goes to storeRouter --->> go to storeRoute.js
-// app.use("/products",productRouter);
+app.use("/products",productRouter);
 // app.use("/users",userRouter);
 // app.use("/auth",authRouter);
 
