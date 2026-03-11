@@ -32,6 +32,7 @@ app.use(session({
 app.use("/",storeRouter);               //Beginning "/" goes to storeRouter --->> go to storeRoute.js
 app.use("/products",productRouter);
 app.use("/users",userRouter);
+app.use("/store",storeRouter);
 // app.use("/auth",authRouter);
 
 const startServer = async ()=>{
